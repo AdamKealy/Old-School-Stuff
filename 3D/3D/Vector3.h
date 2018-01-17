@@ -33,7 +33,7 @@ public:
 
 private:
 	// The class has three variables x, y and z 
-	double x;
-	double y;
-	double z;
+	double X;
+	double Y;
+	double Z;
 };

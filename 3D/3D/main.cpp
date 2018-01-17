@@ -1,7 +1,8 @@
+#include "Matrix3.h"
 
-#include "Vector3.h"
 
 int main()
 {
+	std::system("pause");
 	return 0;
 }

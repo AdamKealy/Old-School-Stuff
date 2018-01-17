@@ -2,59 +2,59 @@
 
 double Vector3::getX()
 {
-	 return x;
+	 return X;
 }
 
 void Vector3::setX(double value)
 {
-	x = value;
+	X = value;
 }
 
 double Vector3::getY()
 {
-	return y;
+	return Y;
 }
 
 void Vector3::setY(double value)
 {
-	y = value;
+	Y = value;
 }
 
 double Vector3::getZ()
 {
-	return z;
+	return Z;
 }
 
 void Vector3::setZ(double value)
 {
-	z = value;
+	Z = value;
 }
 
 Vector3::Vector3()
 {
-	x = 0.0f;
-	y = 0.0f;
-	z = 0.0f;
+	X = 0.0f;
+	Y = 0.0f;
+	Z = 0.0f;
 }
 
 Vector3::Vector3(double x1, double y1, double z1)
 {
 	// To allow other values for X, Y and Z to be declared
-	x = x1;
-	y = y1;
-	z = z1;
+	X = x1;
+	Y = y1;
+	Z = z1;
 }
 
 double Vector3::Length()
 {
 	// A method to return the length of the vector
-	return sqrt(x * x + y * y + z * z);
+	return sqrt(X * X + Y * Y + Z * Z);
 }
 
 double Vector3::LengthSquared()
 {
 	// A method to return the length squared of the vector
-	return (x * x + y * y + z * z);
+	return (X * X + Y * Y + Z * Z);
 }
 
 void Vector3::Normalise()
@@ -64,25 +64,25 @@ void Vector3::Normalise()
 	if (Length() > 0.0)
 	{  // Check for divide by zero
 		double magnit = Length();
-		x /= magnit;
-		y /= magnit;
-		z /= magnit;
+		X /= magnit;
+		Y /= magnit;
+		Z /= magnit;
 	}
 }
 
 Vector3 Vector3::operator+(const Vector3 right) const
 {
-	return Vector3(x + right.x, y + right.y, z + right.z);
+	return Vector3(X + right.X, Y + right.Y, Z + right.Z);
 }
 
 Vector3 Vector3::operator-(const Vector3 right) const
 {
-	return Vector3(x - right.x, y - right.y, z - right.z);
+	return Vector3(X - right.X, Y - right.Y, Z - right.Z);
 }
 
 Vector3 Vector3::operator*(const Vector3 scalar) const
 {
-	return Vector3(x * scalar.x, y * scalar.y, z * scalar.z);
+	return Vector3(X * scalar.X, Y * scalar.Y, Z * scalar.Z);
 }
 
 Vector3 Vector3::operator^(const Vector3 right) const
@@ -93,6 +93,6 @@ Vector3 Vector3::operator^(const Vector3 right) const
 std::string Vector3::toString()
 {
 	char tmpbuf[256];
-	sprintf_s(tmpbuf, "[%g, %g, %g]", x, y, z);
+	sprintf_s(tmpbuf, "[%g, %g, %g]", X, Y, Z);
 	return tmpbuf;
 }
