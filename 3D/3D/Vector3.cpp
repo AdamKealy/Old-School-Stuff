@@ -85,6 +85,12 @@ Vector3 Vector3::operator*(const Vector3 scalar) const
 	return Vector3(X * scalar.X, Y * scalar.Y, Z * scalar.Z);
 }
 
+double Vector3::operator*(Vector3 V1)
+{
+	// An overloaded operator * to return the scalar product of 2 vectors
+	return (V1.X * X + V1.Y * Y + V1.Z * Z);
+}
+
 Vector3 Vector3::operator^(const Vector3 right) const
 {
 	return Vector3();

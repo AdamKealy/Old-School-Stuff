@@ -27,6 +27,7 @@ public:
 	Vector3 operator +(const Vector3 right) const;
 	Vector3 operator -(const Vector3 right) const;
 	Vector3 operator *(const Vector3 scalar) const;
+	double operator *(Vector3 V1);
 	Vector3 operator ^(const Vector3 right) const;
 
 	std::string toString();
